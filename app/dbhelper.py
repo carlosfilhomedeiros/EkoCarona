@@ -1,5 +1,5 @@
 import pymysql
-import dbconfig
+from app import dbconfig
 
 
 class DBHelper:

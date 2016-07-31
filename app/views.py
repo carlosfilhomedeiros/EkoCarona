@@ -1,14 +1,12 @@
 
-from flask import Flask
+from app import app
 from flask import render_template
 from flask import request
 import json
-from forms import AddCaronaForm
-from dbhelper import DBHelper
-
+#from app import forms
+from .forms import AddCaronaForm
+from .dbhelper import DBHelper
 DB = DBHelper()
-
-app = Flask(__name__)
 app.secret_key = 's3cr3t'
 
 
@@ -59,5 +57,6 @@ def add_carona():
     return home()
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)  # , port=5000, debug=True))
+# not necessary once I run from run.py
+# if __name__ == "__main__":
+ #   app.run(host='0.0.0.0', debug=True)
