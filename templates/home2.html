@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div id="nav" class="col m4 s12">
+          {% for item in items %}
+          <div class="card small">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="responsive-img activator" src="{{item.profile_pic}}">
+              <span>
+                <b> {{item.date_month}} </b>
+                <span>{{item.date_day}}</span>
+                <small>Sáb</small>
+              </span>
+            </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+            <p><a href="#">This is a link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
+          {% endfor %}
+        </div>
+
+
+        <div class="hide-on-small-only	 col m8">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

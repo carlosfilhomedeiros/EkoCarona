@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div id="nav" class="col m4 s12">
+          {% for item in items %}
+          <div class="card-panel gray lighten-5  z-depth-1">
+            <div class="row valign-wrapper">
+              <div class="col s4">
+                <img src="{{ item.profile_pic }}" alt="" class="responsive-img"> <!-- notice the "circle" class -->
+              </div>
+              <div class="col s8">
+                <div class="row">
+                  <div class="col s6">
+                    <h5> {{ item.nome }}</h5>
+                  </div>
+                  <div class="col s6">
+                    <div class="ride-date right">
+                      <b>JUL</b>
+                      <p>23</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ride-path">
+                <div class="row">
+                  <div class="col s6">
+                    <span><strong>De:</strong></span>
+                    <div class="chip light-green white-text">
+                        Natal
+                     </div>
+                  </div>
+                  <div class="col s6">
+                    <span><strong>Para:</strong></span>
+                    <div class="chip light-green white-text">
+                        Mossoró
+                     </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+
+        <div class="hide-on-small-only	 col m8">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

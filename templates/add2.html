@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- <form action="/submitcarona" method="post">
+      {{ form.hidden_tag() }}
+      <p>
+          Please enter your OpenID:<br>
+          {{ form.local_saida }}<br>
+          {% for error in form.local_saida.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p><input type="submit" value="Sign In"></p>
+  </form> -->
+
+
+  <div class="wrapper">
+    <form action="/submitcarona" method="POST" id="myForm">
+      <div class="row input-wrapper">
+        <div id="chegada" class="input-field col s12">
+          {{ form.local_chegada }}
+          <label for="local_chegada">Para onde você vai?</label>
+          <a class="btn-floating btn-large waves-effect waves-light light-green right"><i class="material-icons">add</i></a>
+        </div>
+        <div id="saida" class="input-field col s12">
+          {{ form.local_saida }}
+          <label for="local_saida">De onde você vai sair?</label>
+          <a class="btn-floating btn-large waves-effect waves-light light-green right"><i class="material-icons">add</i></a>
+        </div>
+        <div id="date" class="input-field col s12">
+          <label for="departure_date" class="">Dia</label>
+          <input id="departure_date" name="departure_date" type="text" class="datepicker picker__input" readonly="" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="birthdate_root">
+          <button class="btn waves-effect waves-light light-green right" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <script src="{{url_for('static',filename='js/queries.js') }}">
+  </script>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    background: white;
+
+}
+#map {
+    width: 100%;
+    height: 30em;
+}
+#nav {
+    height:30em;
+    overflow-y: auto;
+}
+.ride-date p{
+  margin: 0px;
+  padding: 0px;
+}
+/*.ride-date{
+  margin: 0px 2em 0px 0px !important;
+  padding: 0em 2em 0px 2em;
+}*/
+.ride-path{
+  margin-top: 2em;
+}
+.wrapper {
+  margin-top: 3em;
+  padding-top: 1em;
+}
+
+/* label color */
+  .input-field  label {
+    color: black;
+    font-weight: bold;
+  }
+  .input-field .prefix{
+    font-size: 2.5em;
+    color: black;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #212121;
+    font-size: 1.8em;
+  }
+
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #B6B6B6;
+    box-shadow: 0 1px 0 0 #B6B6B6;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #212121;
+    font-size: 2.2em !important;
+  }
